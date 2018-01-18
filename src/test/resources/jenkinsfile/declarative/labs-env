@@ -1,6 +1,6 @@
 node {
     stage ('Code Checkout') {
-        git url: 'https://github.com/rht-labs/automation-api.git', branch: 'master'
+        git url: 'https://github.com/j-burlison/automation-api.git', branch: 'master'
     }
 
     stage ('Build App') {

@@ -589,7 +589,7 @@
             "apps": [
               {
                 "name": "automation-api",
-                "scm_url": "https://github.com/rht-labs/automation-api.git",
+                "scm_url": "https://github.com/j-burlison/automation-api.git",
                 "scm_ref": "master",
                 "build_tool": "mvn-3",
                 "build_application_commands": [

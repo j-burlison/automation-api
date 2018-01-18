@@ -7,7 +7,7 @@ node (''){
     // these should align to the projects in the Application Inventory
     env.NAMESPACE = env.OPENSHIFT_BUILD_NAMESPACE.reverse().drop(6).reverse()
     env.DEV_PROJECT = "${env.NAMESPACE}-dev"
-    env.TEST_PROJECT = "${env.NAMESPACE}-test"
+    env.TEST_PROJECT = "${env.NAMESPACE}-demo"
     env.UAT_PROJECT = "${env.NAMESPACE}-uat"
 
     // this value should be set to the root directory of your source code within the git repository.
@@ -60,7 +60,7 @@ node('mvn-build-pod') {
                         apiURL: "${env.OCP_API_SERVER}",
                         authToken: "${env.OCP_TOKEN}",
                         depCfg: 'nexus',
-                        namespace: 'employers-ci-cd', 
+                        namespace: 'employers-ci-cd',
                         verifyReplicaCount: true,
                         waitTime: '3',
                         waitUnit: 'min'
